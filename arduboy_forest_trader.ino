@@ -368,7 +368,7 @@ int journey() {
   if (g.sun) g.sun=0; else {g.sun=1; g.day++;}
   if (g.cargo[HEALTH]!=0) {tpos=2; p=welcome; add_text(); 
                           name_town(); save_state();}
-                    else  {p=gameover; add_text(); load_state();}
+                    else  {p=gameover; add_text(); initial_state(); save_state(); load_state();}
    write_text();
   _delay_ms(3000); 
   return(0);
